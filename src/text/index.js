@@ -1,0 +1,7 @@
+
+////////////////// NAVBAR /////////////////////////////////////////////
+export const textNavbar = {
+  es: ['Nosotros', 'Experiencias', 'Servicios', 'Prueba Gratis', 'Contacto'],
+  en: ['About Us', 'Experiences', 'Services', 'Free Trial', 'Contact']
+}
+//////////////////////////////////////////////////////////////////////
