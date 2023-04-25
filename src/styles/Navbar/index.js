@@ -7,10 +7,10 @@ import {
 
 ////////////////// ICONS //////////////////////////////////////////////
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
-
-////////////////// STYLES COMPONENTS //////////////////////////////////////
-////////////////// STYLES COMPONENTS //////////////////////////////////////
+////////////////// CUSTOM STYLES COMPONENTS //////////////////////////////////////
+////////////////// CUSTOM STYLES COMPONENTS //////////////////////////////////////
 export const WrapperNavbar = styled(Stack)(({ theme }) => ({
   width: '100%',
   height: '70px',
@@ -43,6 +43,13 @@ export const IconMenu = styled(MenuIcon)(({ theme }) => ({
   }
 }))
 
+export const IconClose = styled(CloseIcon)(({ theme }) => ({
+  display: 'none',
+  [theme.breakpoints.down('sm')]: {
+    display: 'flex',
+    color: theme.palette.secondary.main
+  }
+}))
 
 export const WrapperLogo = styled(Box)(({ theme }) => ({
   flexGrow: '1',
@@ -86,7 +93,6 @@ export const ItemNav = styled('button')(({ theme }) => ({
   },
   [theme.breakpoints.down('md')]: {
     fontSize: '14px',
-
   }
 }))
 
