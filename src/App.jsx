@@ -15,6 +15,7 @@ import Experiences from "./components/Experiences"
 import Services from "./components/Services"
 import FreeTrial from "./components/FreeTrial"
 import Contact from "./components/Contact"
+import { useEffect } from "react"
 
 
 
@@ -22,9 +23,19 @@ import Contact from "./components/Contact"
 ////////////////// MAIN COMPONENT /////////////////////////////////////////////
 function App () {
 
+  const scrollToTop = () => {
+    document.getElementById('Home').scrollIntoView({ behavior: "smooth", block: "end" })
+  }
+
+  useEffect(() => {
+    scrollToTop()
+  }, [])
+
+
   return (
     <AppProvider>
       <ThemeProvider theme={theme}>
+
         <Container maxWidth='false'
           sx={{
             width: '100%',
@@ -34,7 +45,7 @@ function App () {
             boxSizing: 'border-box',
           }}
         >
-          <Navbar />
+          <Navbar scrollToTop={scrollToTop} />
           <Home />
           <AboutUs />
           <Experiences />
@@ -42,6 +53,7 @@ function App () {
           <FreeTrial />
           <Contact />
         </Container>
+
       </ThemeProvider>
     </AppProvider>
   )

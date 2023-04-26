@@ -1,6 +1,6 @@
 
 ////////////////// TEXT /////////////////////////////////////////////
-import { textNavbar } from '../../constant'
+import { TEXT_NAVBAR } from '../../constant'
 
 ////////////////// CONTEXT ///////////////////////////////////////////
 import { useContext, useState } from "react"
@@ -32,23 +32,19 @@ import image from '../../assets/logo.png'
 
 ////////////////// MAIN COMPONENT /////////////////////////////////////////////
 ////////////////// MAIN COMPONENT /////////////////////////////////////////////
-function Navbar () {
+function Navbar ({ scrollToTop }) {
   const [openSideBar, setOpenSideBar] = useState(false)
   const { language } = useContext(AppContext)
 
-  const items = useGetText(textNavbar, language)
+  const items = useGetText(TEXT_NAVBAR, language)
 
   const handleOpenSideBar = () => setOpenSideBar(!openSideBar)
-
-  const scrollToTop = () => {
-    document.getElementById('Home').scrollIntoView({ behavior: "smooth", block: "end" })
-  }
-
 
   const handleScroll = (item) => {
     const section = document.getElementById(item)
     section.scrollIntoView({ behavior: "smooth", block: "end" })
   }
+
 
   return (
     <>
