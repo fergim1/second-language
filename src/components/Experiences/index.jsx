@@ -1,23 +1,24 @@
 ////////////////// CONTEXT ///////////////////////////////////////////
-import { useContext } from "react";
-import { AppContext } from "../../context";
+import { useContext } from "react"
+import { AppContext } from "../../context"
 
 ////////////////// CUSTOM STYLES COMPONENTS //////////////////////////////////////
 import {
-  ContainerAboutUs
-} from "../../styles/AboutUs";
+  ContainerExperiences
+} from "../../styles/Experiences"
+
+
 
 ////////////////// MAIN COMPONENT /////////////////////////////////////////////
 ////////////////// MAIN COMPONENT /////////////////////////////////////////////
-function AboutUs () {
+function Experiences () {
   const { language } = useContext(AppContext)
+
   return (
-    <ContainerAboutUs id={language === 'en' ? 'About Us' : 'Nosotros'}>
-      <h1>
-        About Us
-      </h1>
-    </ContainerAboutUs>
+    <ContainerExperiences id={language === 'en' ? 'Experiences' : 'Experiencias'}>
+      <h1>Experiences</h1>
+    </ContainerExperiences>
   )
 }
 
-export default AboutUs
+export default Experiences

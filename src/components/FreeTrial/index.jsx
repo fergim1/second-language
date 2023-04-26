@@ -1,23 +1,24 @@
 ////////////////// CONTEXT ///////////////////////////////////////////
-import { useContext } from "react";
-import { AppContext } from "../../context";
+import { useContext } from "react"
+import { AppContext } from "../../context"
 
 ////////////////// CUSTOM STYLES COMPONENTS //////////////////////////////////////
 import {
-  ContainerAboutUs
-} from "../../styles/AboutUs";
+  ContainerFreeTrial
+} from "../../styles/FreeTrial"
+
+
 
 ////////////////// MAIN COMPONENT /////////////////////////////////////////////
 ////////////////// MAIN COMPONENT /////////////////////////////////////////////
-function AboutUs () {
+function FreeTrial () {
   const { language } = useContext(AppContext)
+
   return (
-    <ContainerAboutUs id={language === 'en' ? 'About Us' : 'Nosotros'}>
-      <h1>
-        About Us
-      </h1>
-    </ContainerAboutUs>
+    <ContainerFreeTrial id={language === 'en' ? 'Free Trial' : 'Prueba Gratis'}>
+      <h1>Free Trial</h1>
+    </ContainerFreeTrial>
   )
 }
 
-export default AboutUs
+export default FreeTrial

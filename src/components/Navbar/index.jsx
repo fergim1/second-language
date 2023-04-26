@@ -38,11 +38,17 @@ function Navbar () {
 
   const items = useGetText(textNavbar, language)
 
-  const handleOpenSideBar = () => {
-    setOpenSideBar((prevState) => !prevState)
+  const handleOpenSideBar = () => setOpenSideBar(!openSideBar)
+
+  const scrollToTop = () => {
+    document.getElementById('Home').scrollIntoView({ behavior: "smooth", block: "end" })
   }
 
-  console.log(openSideBar)
+
+  const handleScroll = (item) => {
+    const section = document.getElementById(item)
+    section.scrollIntoView({ behavior: "smooth", block: "end" })
+  }
 
   return (
     <>
@@ -52,16 +58,18 @@ function Navbar () {
           onClick={handleOpenSideBar}
         >
           {openSideBar === false ? <IconMenu /> : <IconClose />}
-
         </WrapperMenu>
 
         <WrapperLogo>
-          <Logo src={image} alt='logo-second-language-mode-on' />
+          <Logo src={image} alt='logo-second-language-mode-on' onClick={scrollToTop} />
         </WrapperLogo>
 
         <WrapperItems>
           {items.map(item => (
-            <ItemNav key={item}>
+            <ItemNav
+              key={item}
+              onClick={() => handleScroll(item)}
+            >
               {item}
             </ItemNav>
           ))}
@@ -73,9 +81,10 @@ function Navbar () {
 
       </WrapperNavbar>
 
-      {openSideBar
+      {
+        openSideBar
         &&
-        <SideBar items={items} />
+        <SideBar items={items} handleOpenSideBar={handleOpenSideBar} />
       }
     </>
   )

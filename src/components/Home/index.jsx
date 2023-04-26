@@ -1,9 +1,16 @@
+////////////////// CUSTOM STYLES COMPONENTS //////////////////////////////////////
+import {
+  ContainerHome,
+} from "../../styles/Home"
 
+
+////////////////// MAIN COMPONENT /////////////////////////////////////////////
+////////////////// MAIN COMPONENT /////////////////////////////////////////////
 function Home () {
   return (
-    <>
-      <p>Home</p>
-    </>
+    <ContainerHome id='Home'>
+      <h1>Home</h1>
+    </ContainerHome>
   )
 }
 

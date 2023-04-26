@@ -11,7 +11,10 @@ import { Container } from "@mui/material"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import AboutUs from "./components/AboutUs"
-
+import Experiences from "./components/Experiences"
+import Services from "./components/Services"
+import FreeTrial from "./components/FreeTrial"
+import Contact from "./components/Contact"
 
 
 
@@ -34,6 +37,10 @@ function App () {
           <Navbar />
           <Home />
           <AboutUs />
+          <Experiences />
+          <Services />
+          <FreeTrial />
+          <Contact />
         </Container>
       </ThemeProvider>
     </AppProvider>

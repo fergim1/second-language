@@ -2,7 +2,6 @@
 import styled from "@emotion/styled";
 import {
   Box,
-  Container
 } from "@mui/material";
 
 ////////////////// ANIMATION ////////////////////////////////////////////
@@ -22,11 +21,12 @@ const slideInLeft = keyframes`
 
 ////////////////// CUSTOM STYLES COMPONENTS //////////////////////////////////////
 ////////////////// CUSTOM STYLES COMPONENTS //////////////////////////////////////
-export const WrapperSideBar = styled(Container)(({ theme }) => ({
-  position: 'absolute',
+export const WrapperSideBar = styled(Box)(({ theme }) => ({
+  position: 'fixed',
   top: '50px',
-  width: '100%',
-  height: 'calc(100vh - 50px)',
+  bottom: '0',
+  left: '0',
+  right: '0',
   backgroundColor: theme.palette.primary.main,
   paddingTop: '40px',
   animation: `${slideInLeft} 0.6s both`
@@ -37,7 +37,6 @@ export const WrapperItemSidebar = styled(Box)(() => ({
   width: '100%',
   height: '60px',
   marginTop: '6px',
-  // border: '2px solid red',
   display: 'flex',
   placeItems: 'center',
   flexDirection: 'column'
