@@ -13,7 +13,7 @@ const SideBar = ({ items, handleOpenSideBar }) => {
   const handleScroll = (item) => {
     handleOpenSideBar()
     const section = document.getElementById(item)
-    section.scrollIntoView({ behavior: "smooth", block: "end" })
+    section.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
   return (

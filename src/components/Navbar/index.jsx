@@ -42,7 +42,7 @@ function Navbar ({ scrollToTop }) {
 
   const handleScroll = (item) => {
     const section = document.getElementById(item)
-    section.scrollIntoView({ behavior: "smooth", block: "end" })
+    section.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
 
