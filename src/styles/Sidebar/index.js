@@ -6,7 +6,7 @@ import {
 
 ////////////////// ANIMATION ////////////////////////////////////////////
 import { keyframes } from "@mui/material/styles";
-import zIndex from "@mui/material/styles/zIndex";
+
 const slideInLeft = keyframes`
   0% {
     -webkit-transform: translateX(-1000px);
@@ -31,7 +31,7 @@ export const WrapperSideBar = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
   paddingTop: '40px',
   animation: `${slideInLeft} 0.6s both`,
-  zIndex: '100'
+  zIndex: '2'
 
 }))
 

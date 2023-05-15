@@ -69,7 +69,7 @@ function FreeTrial () {
   return (
     <ContainerFreeTrial id={language === 'en' ? 'Free Trial' : 'Prueba Gratis'}>
 
-      <GridContainer container spacing={{ sm: 4, md: 2 }} >
+      <GridContainer container spacing={2} >
 
         {/* ////////////////////////////////////  GRID LEFT TOP ////////////////////////////// */}
         <GridItemLeftTop item xs={12} sm={6} >

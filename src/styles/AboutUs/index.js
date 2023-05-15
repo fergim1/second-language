@@ -73,12 +73,9 @@ export const TitleSection = styled(Typography)(({ theme }) => ({
   lineHeight: '1',
   padding: '0',
   [theme.breakpoints.down('md')]: {
-    // fontSize: '36px',
     textAlign: 'center',
   },
   [theme.breakpoints.down('sm')]: {
-    // fontSize: '36px',
-    textAlign: 'center',
     marginBottom: '32px',
   },
 }))
@@ -91,8 +88,10 @@ export const Title = styled(Typography)(({ theme }) => ({
   lineHeight: '1.1',
   marginBottom: '20px',
   fontFamily: "'Encode Sans Expanded', sans-serif",
-  [theme.breakpoints.down('sm')]: {
+  [theme.breakpoints.down('md')]: {
     textAlign: 'center',
+  },
+  [theme.breakpoints.down('sm')]: {
     fontSize: '24px',
   },
 }))
@@ -104,7 +103,6 @@ export const Text = styled(Typography)(({ theme }) => ({
   lineHeight: '20px',
   fontFamily: "'Encode Sans Expanded', sans-serif",
   [theme.breakpoints.down('sm')]: {
-    // fontSize: '14px',
     textAlign: 'center',
   },
 }))

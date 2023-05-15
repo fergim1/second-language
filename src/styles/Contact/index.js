@@ -58,13 +58,19 @@ export const TitleSection = styled(Typography)(({ theme }) => ({
   lineHeight: '1',
   margin: '32px',
   padding: '0',
-  [theme.breakpoints.down('md')]: {
-    // fontSize: '36px',
+  [theme.breakpoints.down('sm')]: {
     textAlign: 'center',
   },
 }))
 
-export const SubtitleOne = styled(Typography)(({ theme }) => ({
+export const WrapperTitle = styled(Box)(() => ({
+  display: 'flex',
+  justifyContent: 'center',
+  flexDirection: 'column',
+  padding: '0px 30px',
+}))
+
+export const Title = styled(Typography)(({ theme }) => ({
   fontSize: '28px',
   fontWeight: '600',
   color: '#484a46',
@@ -77,23 +83,13 @@ export const SubtitleOne = styled(Typography)(({ theme }) => ({
 
 }))
 
-export const SubtitleTwo = styled(Typography)(({ theme }) => ({
-  fontSize: '28px',
-  fontWeight: '600',
-  color: '#484a46',
-  lineHeight: '1.1',
-  fontFamily: "'Encode Sans Expanded', sans-serif",
-  [theme.breakpoints.down('sm')]: {
-    textAlign: 'center',
-    fontSize: '24px',
-  },
-}))
 
 export const WrapperInfoContact = styled(Box)(({ theme }) => ({
   marginTop: '10px',
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',
+  padding: '0px 30px',
   [theme.breakpoints.down('sm')]: {
     marginBottom: '10px',
   },
@@ -109,6 +105,9 @@ export const WrapperDetail = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     justifyContent: 'center',
   },
+  '&:hover': {
+    color: theme.palette.secondary.main
+  },
 }))
 
 export const TextWhatsapp = styled(Link)(({ theme }) => ({
@@ -121,11 +120,10 @@ export const TextWhatsapp = styled(Link)(({ theme }) => ({
   lineHeight: '24px',
   fontFamily: "'Encode Sans Expanded', sans-serif",
   [theme.breakpoints.down('sm')]: {
-    // fontSize: '14px',
     textAlign: 'center',
   },
   '&:hover': {
-    color: theme.palette.primary.main
+    color: theme.palette.secondary.main
   },
 }))
 
@@ -139,11 +137,10 @@ export const TextEmail = styled(Typography)(({ theme }) => ({
   lineHeight: '24px',
   fontFamily: "'Encode Sans Expanded', sans-serif",
   [theme.breakpoints.down('sm')]: {
-    // fontSize: '14px',
     textAlign: 'center',
   },
   '&:hover': {
-    color: theme.palette.primary.main
+    color: theme.palette.secondary.main
   },
 }))
 

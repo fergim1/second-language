@@ -20,7 +20,7 @@ export const WrapperNavbar = styled(Stack)(({ theme }) => ({
   background: theme.palette.primary.main,
   padding: '0 0 0 16px',
   margin: '0',
-  zIndex: '100',
+  zIndex: '10',
   [theme.breakpoints.down('sm')]: {
     height: '50px',
     padding: '0'

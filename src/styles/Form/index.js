@@ -1,5 +1,4 @@
 import styled from "@emotion/styled";
-import { Padding } from "@mui/icons-material";
 import { Box, Button, CircularProgress, FormControl, FormGroup, IconButton, InputLabel, OutlinedInput, TextField, Typography, } from "@mui/material";
 
 // /////// Animation

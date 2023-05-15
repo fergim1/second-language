@@ -6,19 +6,28 @@ import { LINKS_IMAGES } from "../../constant";
 export const ContainerHome = styled(Box)(({ theme }) => ({
   width: '100%',
   height: 'calc(100vh - 70px)',
-  backgroundColor: 'black',
   color: 'white',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
   flexDirection: 'column',
-  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${LINKS_IMAGES.homeBackground})`,
+  position: 'relative',
+  backgroundSize: 'cover',
   backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${LINKS_IMAGES.homeBackground})`,
   [theme.breakpoints.down('sm')]: {
     height: 'calc(100vh - 50px)',
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(${LINKS_IMAGES.homeBackgroundMobile})`,
   }
 }))
+
+// export const ImageBackground = styled('img')(() => ({
+//   position: 'absolute',
+//   objectFit: 'cover',
+//   // width: 'auto',
+//   // height: 'auto',
+// }))
 
 export const TextCaption = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.main,

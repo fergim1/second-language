@@ -3,12 +3,15 @@ import { useContext } from "react"
 import { AppContext } from "../../context"
 import {
   ButtonHome,
-  ContainerHome, TextCaption, TextTitle,
+  ContainerHome,
+  TextCaption,
+  TextTitle,
 } from "../../styles/Home"
 
-
+////////////////// TEXT SECTION //////////////////////////////////////
 import { TEXT_HOME as textSection } from "../../constant"
 import { getText } from "../../utils"
+
 
 
 ////////////////// MAIN COMPONENT /////////////////////////////////////////////
@@ -20,7 +23,7 @@ function Home () {
   const strollToAboutUs = ({ language }) => {
     const aboutUs = language === 'en' ? 'About Us' : 'Nosotros'
     const aboutUsSection = document.getElementById(aboutUs)
-    aboutUsSection.scrollIntoView({ behavior: "smooth", block: "end" })
+    aboutUsSection.scrollIntoView({ behavior: "smooth", block: "start" })
   }
 
   return (

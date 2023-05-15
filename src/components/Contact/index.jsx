@@ -4,8 +4,8 @@ import {
   GridContainer,
   GridItemLeftTop,
   TitleSection,
-  SubtitleOne,
-  SubtitleTwo,
+  WrapperTitle,
+  Title,
   GridItemRightBottom,
   WrapperForm,
   WrapperInfoContact,
@@ -47,11 +47,12 @@ function Contact () {
         {/* ////////////////////////////////////  GRID LEFT TOP ////////////////////////////// */}
         <GridItemLeftTop item xs={12} sm={6} >
           <TitleSection > {text.titleSection} </TitleSection>
-          <SubtitleOne> {text.subtitleOne}</SubtitleOne><br></br>
-          <SubtitleTwo > {text.subtitleTwo} 👋 </SubtitleTwo>
+          <WrapperTitle>
+            <Title> {text.subtitleOne} 👋</Title><br></br>
+          </WrapperTitle>
 
           <WrapperInfoContact>
-            <WrapperDetail id='algo'>
+            <WrapperDetail >
               <WhatsAppIcon />
               <TextWhatsapp
                 href='https://wa.me/34687489741' target="_blank" rel="noreferrer" aria-label="Whatsapp"
