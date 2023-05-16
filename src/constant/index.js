@@ -9,8 +9,10 @@ export const TEXT_NAVBAR = Object.freeze({
 ////////////////// IMAGES /////////////////////////////////////////////
 ////////////////// IMAGES /////////////////////////////////////////////
 export const LINKS_IMAGES = {
-  homeBackground: 'https://res.cloudinary.com/fergim1/image/upload/v1683276791/Second-language/header-background_pjgrkx.jpg',
-  homeBackgroundMobile: 'https://res.cloudinary.com/fergim1/image/upload/v1683357830/Second-language/background-mobile-SL_jj4v13.jpg',
+  // homeBackground: 'https://res.cloudinary.com/fergim1/image/upload/v1683276791/Second-language/header-background_pjgrkx.jpg',
+  homeBackground: 'https://res.cloudinary.com/fergim1/image/upload/v1684226976/Second-language/background-home2_1_pf9zmr.jpg',
+  // homeBackgroundMobile: 'https://res.cloudinary.com/fergim1/image/upload/v1683357830/Second-language/background-mobile-SL_jj4v13.jpg',
+  homeBackgroundMobile: 'https://res.cloudinary.com/fergim1/image/upload/v1684228699/Second-language/background-home-mobile2_1_vb7etc.jpg',
   emailSent: 'https://res.cloudinary.com/fergim1/image/upload/v1677266193/Paella%20Tour/email-sent_sfkhzz.png',
 }
 //////////////////////////////////////////////////////////////////////

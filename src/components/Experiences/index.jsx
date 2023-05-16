@@ -19,8 +19,7 @@ import { getText, getExperiences } from "../../utils"
 
 ////////////// MODAL ///////////////////////////////////////////////
 import Modal from "../Modal"
-// import { createPortal } from "react-dom"
-// import { ContainerModal } from "../../styles/Modal"
+
 
 
 

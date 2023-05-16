@@ -14,7 +14,9 @@ import CloseIcon from '@mui/icons-material/Close';
 export const WrapperNavbar = styled(Stack)(({ theme }) => ({
   position: 'sticky',
   top: '0',
-  width: '100%',
+  left: '0',
+  right: '0',
+  // width: '100%',
   height: '70px',
   flexDirection: 'row',
   background: theme.palette.primary.main,

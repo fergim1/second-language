@@ -16,6 +16,7 @@ import Services from "./components/Services"
 import FreeTrial from "./components/FreeTrial"
 import Contact from "./components/Contact"
 import { useEffect } from "react"
+import { Footer } from "./components/Footer"
 
 
 
@@ -52,6 +53,7 @@ function App () {
           <Services />
           <FreeTrial />
           <Contact />
+          <Footer />
         </Container>
 
       </ThemeProvider>
