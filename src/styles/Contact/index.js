@@ -18,12 +18,13 @@ export const ContainerContact = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   paddingTop: '40px',
-  // [theme.breakpoints.down('md')]: {
-  // paddingTop: '40px',
-  // },
+  paddingBottom: '30px',
   [theme.breakpoints.down('sm')]: {
     minHeight: 'calc(100vh - 50px)',
     height: 'auto',
+    paddingTop: '0px',
+    paddingBottom: '10px',
+
 
   }
 }))
