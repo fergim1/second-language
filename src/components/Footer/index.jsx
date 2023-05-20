@@ -10,7 +10,7 @@ import {
   Item,
   WrapperCopyright,
   TextCopyright,
-} from "../../styles/footer"
+} from "../../styles/Footer"
 
 ////////////// CONTEXT /////////////////////////////////////////////
 import { AppContext } from '../../context';
