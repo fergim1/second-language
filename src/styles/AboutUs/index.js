@@ -13,15 +13,21 @@ export const ContainerAboutUs = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'center',
   paddingTop: '70px',
+  marginBottom: '70px',
   [theme.breakpoints.down('md')]: {
     minHeight: 'calc(100vh - 50px)',
     height: 'auto',
-    paddingTop: '30px',
+    marginBottom: '0px',
+  },
+  [theme.breakpoints.down('sm')]: {
+    paddingTop: '0px',
   }
 }))
 
 export const GridContainer = styled(Grid)(() => ({
   height: '100%',
+  margin: '0',
+  padding: '0',
 }))
 
 //////////////  GRID LEFT TOP //////////////////////////////
@@ -33,6 +39,7 @@ export const GridItemLeftTop = styled(Grid)(({ theme }) => ({
   alignItems: 'start',
   height: 'calc(100vh - 70px)',
   lineHeight: '0',
+  padding: '0',
   [theme.breakpoints.down('md')]: {
     height: 'auto',
     marginTop: '60px',
@@ -51,11 +58,10 @@ export const WrapperInfo = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down('md')]: {
     padding: '0px 60px 10px 60px',
+    alignItems: 'center',
   },
   [theme.breakpoints.down('sm')]: {
     padding: '30px 30px 0px 30px',
-    alignItems: 'center'
-
   },
 }))
 
@@ -118,12 +124,12 @@ export const GridItemRightBottom = styled(Grid)(({ theme }) => ({
   display: 'grid',
   placeContent: 'center',
   height: 'calc(100vh - 70px)',
+  padding: '0px',
   [theme.breakpoints.down('md')]: {
     height: 'auto',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'start',
-    // maxHeight: '60vh',
   },
 }))
 
@@ -141,7 +147,6 @@ export const WrapperVideo = styled(Box)(({ theme }) => ({
   },
   [theme.breakpoints.down('sm')]: {
     height: "40vh",
-    // alignItems: 'start',
     width: '90vw',
     marginBottom: '32px',
   },

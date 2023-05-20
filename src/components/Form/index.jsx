@@ -1,7 +1,7 @@
-import { useContext, useState } from "react";
+import { useContext, useRef, useState } from "react";
 
-///////////////////// Material UI Components ///////////////////////////////////
-import { InputAdornment } from "@mui/material";
+///////////////////// Email JS ///////////////////////////////////
+import emailjs from 'emailjs-com'
 
 ///////////////////// Components Styles ///////////////////////////////////
 import {
@@ -16,19 +16,12 @@ import {
   WrapperImageSent,
   WrapperForm,
   TitleForm,
-  IconWrapper,
   TextHelper,
   TextError,
 } from "../../styles/Form";
 
 ////////////// Icons ////////////////////////////////////////////////////////
-import EmailIcon from '@mui/icons-material/Email';
-import PersonIcon from '@mui/icons-material/Person';
 import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-
-////////////// Hooks ////////////////////////////////////////////////////////
-import { useForm } from "../../hooks/useForm";
 
 ////////////// Alert ////////////////////////////////////////////////////////
 import { AlertForm } from "../AlertForm";
@@ -44,9 +37,10 @@ import { AppContext } from "../../context";
 import { useLanguage } from "../../hooks/useLanguage";
 
 
+
 ////////////// MAIN COMPONENT - Form ///////////////////////////////////////////////////
 ////////////// MAIN COMPONENT - Form ///////////////////////////////////////////////////
-const Form = ({ titleForm, url }) => {
+const Form = ({ titleForm }) => {
   ///////  Context  //////////////////
   const { language } = useContext(AppContext)
   const text = useLanguage(language, TEXT_FORM)
@@ -54,17 +48,19 @@ const Form = ({ titleForm, url }) => {
   ///////  States  //////////////////
   const [alertOpen, setAlertOpen] = useState(false)
   const [loading, setLoading] = useState(false)
+  const [sent, setSent] = useState(false)
   const [error, setError] = useState({
     email: false,
     mobile: false
   })
-  const [sent, setSent] = useState(false)
   const [form, setForm] = useState({
     name: '',
     email: '',
+    city: '',
     mobile: '',
     message: '',
   })
+  const formElement = useRef();
 
   ///////  Functions  //////////////////
   const handleInputChange = (e) => {
@@ -74,39 +70,6 @@ const Form = ({ titleForm, url }) => {
     })
   }
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    const { name, email, mobile, message } = form
-    if (!name || !email || !mobile || !message) {
-      return setAlertOpen(true);
-    }
-    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email) && /^[0-9+]{3,}$/.test(mobile)) {
-      return setError({ email: true, mobile: false })
-    }
-    if (!/^[0-9+]{3,}$/.test(mobile) && /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-      return setError({ email: false, mobile: true })
-    }
-    if (!/^[0-9+]{3,}$/.test(mobile) && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
-      return setError({ email: true, mobile: true })
-    }
-    setLoading(true)
-    const payload = {
-      name: form.name,
-      email: form.email,
-      mobile: form.mobile,
-      message: form.message,
-      url: url
-    }
-    await useForm(payload)
-    setForm({
-      name: '',
-      email: '',
-      mobile: '',
-      message: '',
-    })
-    setLoading(false)
-    setSent(true)
-  }
 
   const ErrorHelper = () => {
     if (!error.mobile && !error.email) {
@@ -128,6 +91,35 @@ const Form = ({ titleForm, url }) => {
     }
   }
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+    const { name, email, city, mobile, message } = form
+    if (!name || !email || !city || !mobile || !message) {
+      return setAlertOpen(true);
+    }
+    if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email) && /^[0-9+]{3,}$/.test(mobile)) {
+      return setError({ email: true, mobile: false })
+    }
+    if (!/^[0-9+]{3,}$/.test(mobile) && /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+      return setError({ email: false, mobile: true })
+    }
+    if (!/^[0-9+]{3,}$/.test(mobile) && !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)) {
+      return setError({ email: true, mobile: true })
+    }
+    setLoading(true)
+    emailjs.sendForm('second-language-gmail', 'contact-form', formElement.current, 'vFm5rPd9Tiy3sZi6M')
+      .then((result) => {
+        console.log(result)
+        if (result.text) {
+          setLoading(false)
+          setSent(true)
+        }
+      }, (error) => {
+        console.log(error.text);
+      });
+    e.target.reset()
+  }
+
   return (
     <>
       {
@@ -144,14 +136,10 @@ const Form = ({ titleForm, url }) => {
           ?
           <WrapperForm>
             <TitleForm>
-              {
-                !sent
-                  ? titleForm
-                  : text.textSent
-              }
+              {titleForm}
             </TitleForm>
 
-            <FormGroupContact >
+            <FormGroupContact ref={formElement} >
               <FormControlContact variant="outlined" size='small' >
                 <InputLabelForm color='secondary' htmlFor="name"> {text.inputName} </InputLabelForm>
                 <OutlinedInputForm
@@ -160,13 +148,6 @@ const Form = ({ titleForm, url }) => {
                   onChange={(e) => handleInputChange(e)}
                   label={text.inputName}
                   color='secondary'
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconWrapper aria-label="Name" edge="end" >
-                        <PersonIcon />
-                      </IconWrapper>
-                    </InputAdornment>
-                  }
                 />
               </FormControlContact>
 
@@ -178,13 +159,17 @@ const Form = ({ titleForm, url }) => {
                   onChange={(e) => handleInputChange(e)}
                   label={text.inputEmail}
                   color='secondary'
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconWrapper aria-label="email" edge="end" >
-                        <EmailIcon />
-                      </IconWrapper>
-                    </InputAdornment>
-                  }
+                />
+              </FormControlContact>
+
+              <FormControlContact variant="outlined" sx={{ mb: '10px' }} size='small'>
+                <InputLabelForm color='secondary' htmlFor="city" > {text.inputCity} </InputLabelForm>
+                <OutlinedInputForm
+                  value={form.city}
+                  name='city'
+                  onChange={(e) => handleInputChange(e)}
+                  label={text.inputCity}
+                  color='secondary'
                 />
               </FormControlContact>
 
@@ -196,13 +181,6 @@ const Form = ({ titleForm, url }) => {
                   onChange={(e) => handleInputChange(e)}
                   label={text.inputMobile}
                   color='secondary'
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconWrapper aria-label="mobile" edge="end" >
-                        <PhoneIphoneIcon />
-                      </IconWrapper>
-                    </InputAdornment>
-                  }
                 />
               </FormControlContact>
 
@@ -223,7 +201,7 @@ const Form = ({ titleForm, url }) => {
               <ButtomContactForm
                 type="submit"
                 endIcon={!loading ? <ArrowOutwardIcon /> : ''}
-                onClick={handleSubmit}
+                onClick={sendEmail}
               >
                 {
                   !loading
@@ -232,7 +210,6 @@ const Form = ({ titleForm, url }) => {
               </ButtomContactForm>
             </FormGroupContact>
           </WrapperForm>
-
           :
           <WrapperImageSent>
             <ImageSent src={LINKS_IMAGES.emailSent} alt='email-sent' width='170px' height='150px' />

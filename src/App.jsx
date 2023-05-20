@@ -5,7 +5,11 @@ import { AppProvider } from "./context"
 ////////////////// MATERIAL UI ////////////////////////////////////////////
 import { ThemeProvider } from '@mui/material/styles'
 import { theme } from './styles/theme.js'
-import { Container } from "@mui/material"
+import {
+  // Box, 
+  Container,
+  // Container
+} from "@mui/material"
 
 ////////////////// SECTIONS ////////////////////////////////////////////
 import Navbar from "./components/Navbar"
@@ -39,11 +43,14 @@ function App () {
 
         <Container maxWidth='false'
           sx={{
-            width: '100%',
+            maxWidth: '100vw',
             height: 'auto',
-            margin: { xs: '0px auto' },
+            // margin: { xs: '0px' },
+            margin: '0px',
             padding: { xs: '0px' },
+            // border: '2px solid red',
             boxSizing: 'border-box',
+            fontFamily: "'Encode Sans Expanded', sans-serif",
           }}
         >
           <Navbar scrollToTop={scrollToTop} />

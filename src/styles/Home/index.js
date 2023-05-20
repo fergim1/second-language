@@ -5,7 +5,7 @@ import { LINKS_IMAGES } from "../../constant";
 
 export const ContainerHome = styled(Box)(({ theme }) => ({
   width: '100%',
-  height: 'calc(100vh - 70px)',
+  height: 'calc(100vh - 50px)',
   color: 'white',
   display: 'flex',
   justifyContent: 'center',

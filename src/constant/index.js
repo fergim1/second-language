@@ -9,11 +9,9 @@ export const TEXT_NAVBAR = Object.freeze({
 ////////////////// IMAGES /////////////////////////////////////////////
 ////////////////// IMAGES /////////////////////////////////////////////
 export const LINKS_IMAGES = {
-  // homeBackground: 'https://res.cloudinary.com/fergim1/image/upload/v1683276791/Second-language/header-background_pjgrkx.jpg',
   homeBackground: 'https://res.cloudinary.com/fergim1/image/upload/v1684226976/Second-language/background-home2_1_pf9zmr.jpg',
-  // homeBackgroundMobile: 'https://res.cloudinary.com/fergim1/image/upload/v1683357830/Second-language/background-mobile-SL_jj4v13.jpg',
   homeBackgroundMobile: 'https://res.cloudinary.com/fergim1/image/upload/v1684228699/Second-language/background-home-mobile2_1_vb7etc.jpg',
-  emailSent: 'https://res.cloudinary.com/fergim1/image/upload/v1677266193/Paella%20Tour/email-sent_sfkhzz.png',
+  emailSent: 'https://res.cloudinary.com/fergim1/image/upload/v1684431132/Second-language/email-sent-SLMO_wjymch.png',
 }
 //////////////////////////////////////////////////////////////////////
 
@@ -71,10 +69,12 @@ export const TEXT_FORM = {
   english: {
     inputName: 'Name *',
     inputEmail: 'Email *',
+    inputCity: 'City & Country *',
     inputMobile: 'Mobile ',
     inputMessage: 'Message *',
     inputMessageTextHelp: '* Fields required',
     buttonText: 'Just send',
+    buttonTextSent: 'Submitted !',
     alertTitle: '⚠️ Some field is missing',
     alertName: "You haven't completed your Name",
     alertEmail: "You haven't completed your Email",
@@ -86,10 +86,12 @@ export const TEXT_FORM = {
   spanish: {
     inputName: 'Nombre *',
     inputEmail: 'Correo electrónico *',
+    inputCity: 'Ciudad & País *',
     inputMobile: 'Móvil ',
     inputMessage: 'Mensaje *',
     inputMessageTextHelp: '* Campos requeridos',
     buttonText: 'Enviar',
+    buttonTextSent: 'Enviado !',
     alertTitle: '⚠️ Falta completar algún campo',
     alertName: 'No has escrito tu nombre',
     alertEmail: 'No has escrito tu email',

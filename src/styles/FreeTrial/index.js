@@ -4,7 +4,6 @@ import {
   Button,
   CircularProgress,
   FormControl,
-  FormGroup,
   Grid,
   InputLabel,
   OutlinedInput,
@@ -16,22 +15,25 @@ import {
 
 export const ContainerFreeTrial = styled(Box)(({ theme }) => ({
   width: '100%',
-  height: 'calc(100vh - 70px)',
+  height: '100vh',
   backgroundColor: theme.palette.primary.main,
   color: 'white',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  paddingTop: '70px',
+  padding: '50px 0px 0px 0px',
+  marginBottom: '70px',
   [theme.breakpoints.down('sm')]: {
-    minHeight: 'calc(100vh - 50px)',
+    minHeight: '100vh',
     height: 'auto',
-    paddingTop: '50px',
+    marginBottom: '0px',
   }
 }))
 
 export const GridContainer = styled(Grid)(() => ({
   height: '100%',
+  margin: '0',
+  padding: '0',
 }))
 
 //////////////  GRID LEFT TOP //////////////////////////////
@@ -43,12 +45,10 @@ export const GridItemLeftTop = styled(Grid)(({ theme }) => ({
   alignItems: 'start',
   height: 'calc(100vh - 70px)',
   lineHeight: '0',
-  [theme.breakpoints.down('sm')]: {
+  padding: '0',
+  [theme.breakpoints.down('md')]: {
     height: 'auto',
-    minHeight: '40vh',
-    // marginTop: '60px',
     alignItems: 'center',
-    justifyContent: 'start',
   },
 }))
 
@@ -58,13 +58,15 @@ export const WrapperInfo = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'start',
   padding: '0px 70px 0px 90px',
+  [theme.breakpoints.down('lg')]: {
+    padding: '0px 40px 0px 40px',
+  },
   [theme.breakpoints.down('md')]: {
-    padding: '0px 20px 0px 50px',
+    padding: '0px 10px 0px 40px',
   },
   [theme.breakpoints.down('sm')]: {
-    padding: '30px',
-    alignItems: 'center'
-
+    alignItems: 'center',
+    padding: '30px 30px 0px 30px',
   },
 }))
 
@@ -77,12 +79,9 @@ export const TitleSection = styled(Typography)(({ theme }) => ({
   fontFamily: "'Inter', sans-serif",
   lineHeight: '1',
   padding: '0',
-  [theme.breakpoints.down('md')]: {
-    // fontSize: '36px',
-    textAlign: 'center',
-  },
+  textAlign: 'start',
   [theme.breakpoints.down('sm')]: {
-    // fontSize: '36px',
+    marginBottom: '32px',
     textAlign: 'center',
   },
 }))
@@ -105,6 +104,9 @@ export const Title = styled(Typography)(({ theme }) => ({
   lineHeight: '1.1',
   marginBottom: '20px',
   fontFamily: "'Encode Sans Expanded', sans-serif",
+  textAlign: 'start',
+  [theme.breakpoints.down('md')]: {
+  },
   [theme.breakpoints.down('sm')]: {
     textAlign: 'center',
     fontSize: '24px',
@@ -117,8 +119,8 @@ export const Text = styled(Typography)(({ theme }) => ({
   fontWeight: '400',
   lineHeight: '20px',
   fontFamily: "'Encode Sans Expanded', sans-serif",
+  textAlign: 'start',
   [theme.breakpoints.down('sm')]: {
-    // fontSize: '14px',
     textAlign: 'center',
   },
 }))
@@ -131,8 +133,15 @@ export const GridItemRightBottom = styled(Grid)(({ theme }) => ({
   display: 'grid',
   placeContent: 'center',
   height: 'calc(100vh - 70px)',
-  [theme.breakpoints.down('sm')]: {
+  padding: '0px',
+  [theme.breakpoints.down('md')]: {
     height: 'auto',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  [theme.breakpoints.down('sm')]: {
+    alignItems: 'start',
   },
 }))
 
@@ -147,14 +156,16 @@ export const WrapperForm = styled(Box)(({ theme }) => ({
   borderRadius: '20px',
   [theme.breakpoints.down('sm')]: {
     width: '90vw',
-    marginBottom: '20px',
+    marginTop: '40px',
+    marginBottom: '40px',
   },
 }))
 
 
 
-export const FormGroupContact = styled(FormGroup)(() => ({
+export const FormGroupContact = styled('form')(() => ({
   display: 'flex',
+  flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'start',
   width: '90%',
@@ -212,7 +223,7 @@ export const ButtomContactForm = styled(Button)(({ theme }) => ({
   borderRadius: '20px',
   fontWeight: 'bold',
   width: '100%',
-  height: '32px',
+  height: '34px',
   margin: '14px 0px',
   border: '1px solid transparent',
   '&:hover': {
@@ -237,5 +248,5 @@ export const WrapperImageSent = styled(Box)(() => ({
 export const ImageSent = styled('img')(() => ({
   width: '170px',
   height: '150px',
-  // animation: `${bounceInTop} 1.1s both`
+
 }))

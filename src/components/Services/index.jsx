@@ -45,7 +45,7 @@ function Services () {
   return (
     <ContainerServices id={language === 'en' ? 'Services' : 'Servicios'}>
 
-      <GridContainer container spacing={2} >
+      <GridContainer container spacing={{ xs: 0, md: 2 }} >
 
         {/* ////////////////////////////////////  GRID LEFT TOP ////////////////////////////// */}
         <GridItemLeftTop item xs={12} sm={6} >

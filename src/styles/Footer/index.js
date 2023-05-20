@@ -9,10 +9,8 @@ import {
 
 
 export const ContainerFooter = styled(Box)(() => ({
-  // width: '100vw',
-  width: '100%',
-
-  height: '140px'
+  width: '100vw',
+  height: '190px',
 }))
 
 export const WrapperContent = styled(Box)(({ theme }) => ({
@@ -22,7 +20,7 @@ export const WrapperContent = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-around',
-  padding: '20px 60px 10px 60px',
+  padding: '20px 0px',
   flexDirection: 'column',
   [theme.breakpoints.down('sm')]: {
     padding: '20px 0px',
@@ -63,7 +61,7 @@ export const WrapperThreeItems = styled(Stack)(({ theme }) => ({
   justifyContent: 'space-around',
   flexDirection: 'row',
   [theme.breakpoints.down('md')]: {
-    width: '50%',
+    width: '40%',
   },
   [theme.breakpoints.down('sm')]: {
     flexDirection: 'column'

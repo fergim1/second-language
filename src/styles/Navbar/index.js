@@ -14,19 +14,13 @@ import CloseIcon from '@mui/icons-material/Close';
 export const WrapperNavbar = styled(Stack)(({ theme }) => ({
   position: 'sticky',
   top: '0',
-  left: '0',
-  right: '0',
-  // width: '100%',
-  height: '70px',
+  width: '100vw',
+  height: '50px',
   flexDirection: 'row',
   background: theme.palette.primary.main,
-  padding: '0 0 0 16px',
+  padding: '0',
   margin: '0',
   zIndex: '10',
-  [theme.breakpoints.down('sm')]: {
-    height: '50px',
-    padding: '0'
-  },
 }))
 
 export const WrapperMenu = styled(Box)(({ theme }) => ({
@@ -60,7 +54,9 @@ export const WrapperLogo = styled(Box)(({ theme }) => ({
   flexGrow: '1',
   display: 'flex',
   placeItems: 'center',
+  paddingLeft: '10px',
   [theme.breakpoints.down('sm')]: {
+    paddingLeft: '0px',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -68,7 +64,7 @@ export const WrapperLogo = styled(Box)(({ theme }) => ({
 }))
 
 export const Logo = styled('img')(() => ({
-  width: '60px',
+  width: '50px',
   cursor: 'pointer',
 }))
 
@@ -87,7 +83,7 @@ export const ItemNav = styled('button')(({ theme }) => ({
   fontFamily: theme.typography.fontFamily,
   padding: '16px',
   color: 'white',
-  fontSize: '16px',
+  fontSize: '14px',
   boxShadow: 'none',
   textTransform: 'none',
   backgroundColor: 'transparent',

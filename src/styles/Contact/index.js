@@ -11,13 +11,13 @@ import {
 
 export const ContainerContact = styled(Box)(({ theme }) => ({
   width: '100%',
-  height: 'calc(100vh - 70px)',
-  backgroundColor: '#eeeeee',
+  height: '100vh',
+  backgroundColor: '',
   color: 'white',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  paddingTop: '40px',
+  paddingTop: '30px',
   paddingBottom: '30px',
   [theme.breakpoints.down('sm')]: {
     minHeight: 'calc(100vh - 50px)',
@@ -57,7 +57,7 @@ export const TitleSection = styled(Typography)(({ theme }) => ({
   fontFamily: "'Inter', sans-serif",
   WebkitFontSmoothing: 'antialiased',
   lineHeight: '1',
-  margin: '32px',
+  margin: '0px 32px 12px 32px',
   padding: '0',
   [theme.breakpoints.down('sm')]: {
     textAlign: 'center',

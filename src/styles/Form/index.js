@@ -1,10 +1,5 @@
 import styled from "@emotion/styled";
-import { Box, Button, CircularProgress, FormControl, FormGroup, IconButton, InputLabel, OutlinedInput, TextField, Typography, } from "@mui/material";
-
-// /////// Animation
-// import { bounceInTop } from "../animation";
-
-
+import { Box, Button, CircularProgress, FormControl, InputLabel, OutlinedInput, TextField, Typography, } from "@mui/material";
 
 
 export const WrapperForm = styled(Box)(() => ({
@@ -26,8 +21,9 @@ export const TitleForm = styled(Typography)(({ theme }) => ({
   }
 }))
 
-export const FormGroupContact = styled(FormGroup)(() => ({
+export const FormGroupContact = styled('form')(() => ({
   display: 'flex',
+  flexDirection: 'column',
   justifyContent: 'center',
   alignItems: 'start',
   width: '90%',
@@ -59,10 +55,6 @@ export const OutlinedInputForm = styled(OutlinedInput)(({ theme }) => ({
   }
 }))
 
-export const IconWrapper = styled(IconButton)(() => ({
-  color: '#c6c6c6',
-}))
-
 
 export const TextAreaForm = styled(TextField)(({ theme }) => ({
   width: '100%',
@@ -89,7 +81,6 @@ export const TextHelper = styled('span')(() => ({
   fontSize: '10px',
   marginLeft: '12px',
   marginTop: '5px',
-  // fontFamily: 'Inter',
   fontWeight: '400',
 }))
 
@@ -99,7 +90,7 @@ export const ButtomContactForm = styled(Button)(({ theme }) => ({
   borderRadius: '20px',
   fontWeight: 'bold',
   width: '100%',
-  height: '40px',
+  height: '34px',
   margin: '20px 0px',
   '&:hover': {
     background: theme.palette.primary.main,
@@ -123,5 +114,4 @@ export const WrapperImageSent = styled(Box)(() => ({
 export const ImageSent = styled('img')(() => ({
   width: '170px',
   height: '150px',
-  // animation: `${bounceInTop} 1.1s both`
 }))

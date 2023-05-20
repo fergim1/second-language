@@ -32,7 +32,7 @@ function AboutUs () {
   return (
     <ContainerAboutUs id={language === 'en' ? 'About Us' : 'Nosotros'}>
 
-      <GridContainer container spacing={2} >
+      <GridContainer container spacing={{ xs: 0, md: 2 }} >
 
         {/* ////////////////////////////////////  GRID LEFT TOP ////////////////////////////// */}
         <GridItemLeftTop item xs={12} md={6} >

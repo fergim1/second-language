@@ -29,7 +29,6 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import { TEXT_CONTACT as textSection } from "../../constant"
 import { getText } from "../../utils"
 
-const url = import.meta.env.VITE_URL_CONTACT_FORM
 
 
 
@@ -72,7 +71,7 @@ function Contact () {
         {/* ////////////////////////////////////  GRID RIGHT BOTTOM  ////////////////////////////// */}
         <GridItemRightBottom item xs={12} sm={6} >
           <WrapperForm elevation={2} >
-            <Form titleForm={text.titleForm} url={url} />
+            <Form titleForm={text.titleForm} />
           </WrapperForm>
         </GridItemRightBottom>
 

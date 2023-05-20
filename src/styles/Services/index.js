@@ -11,12 +11,13 @@ import {
 
 export const ContainerServices = styled(Box)(({ theme }) => ({
   width: '100%',
-  height: 'calc(100vh - 70px)',
+  height: 'calc(100vh - 50px)',
   color: 'white',
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  paddingTop: '70px',
+  padding: '50px 0px 0px 0px',
+  marginBottom: '70px',
   [theme.breakpoints.down('sm')]: {
     minHeight: 'calc(100vh - 50px)',
     height: 'auto',
@@ -37,6 +38,7 @@ export const GridItemLeftTop = styled(Grid)(({ theme }) => ({
   alignItems: 'start',
   height: 'calc(100vh - 70px)',
   lineHeight: '0',
+  padding: '0',
   [theme.breakpoints.down('sm')]: {
     height: 'auto',
     marginBottom: '40px',
@@ -51,13 +53,15 @@ export const WrapperInfo = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'start',
   padding: '0px 70px 0px 90px',
+  [theme.breakpoints.down('lg')]: {
+    padding: '0px 40px 0px 40px',
+  },
   [theme.breakpoints.down('md')]: {
-    padding: '0px 20px 0px 50px',
+    padding: '0px 10px 0px 40px',
   },
   [theme.breakpoints.down('sm')]: {
+    alignItems: 'center',
     padding: '30px 30px 0px 30px',
-    alignItems: 'center'
-
   },
 }))
 
@@ -90,6 +94,9 @@ export const Title = styled(Typography)(({ theme }) => ({
   lineHeight: '1.1',
   marginBottom: '60px',
   fontFamily: "'Encode Sans Expanded', sans-serif",
+  [theme.breakpoints.down('md')]: {
+    marginBottom: '20px',
+  },
   [theme.breakpoints.down('sm')]: {
     textAlign: 'center',
     fontSize: '24px',
@@ -115,6 +122,7 @@ export const GridItemRightBottom = styled(Grid)(({ theme }) => ({
   display: 'grid',
   placeContent: 'center',
   height: 'calc(100vh - 70px)',
+  padding: '0',
   [theme.breakpoints.down('sm')]: {
     height: 'auto',
   },
@@ -128,13 +136,9 @@ export const WrapperListServices = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'start',
   borderRadius: '20px',
-  [theme.breakpoints.down('md')]: {
-    marginBottom: '40px',
-  },
   [theme.breakpoints.down('sm')]: {
     width: 'auto',
     alignItems: 'center',
-    paddingLeft: '60px'
   },
 }))
 
