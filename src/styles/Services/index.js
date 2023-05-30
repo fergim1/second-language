@@ -92,7 +92,7 @@ export const Title = styled(Typography)(({ theme }) => ({
   fontWeight: '600',
   color: '#484a46',
   lineHeight: '1.1',
-  marginBottom: '60px',
+  marginBottom: '20px',
   fontFamily: "'Encode Sans Expanded', sans-serif",
   [theme.breakpoints.down('md')]: {
     marginBottom: '20px',
@@ -115,12 +115,17 @@ export const Text = styled(Typography)(({ theme }) => ({
 }))
 
 
+
+
+
 //////////////  GRID RIGHT BOTTOM //////////////////////////////
 //////////////  GRID RIGHT BOTTOM //////////////////////////////
 export const GridItemRightBottom = styled(Grid)(({ theme }) => ({
   width: '100vw',
-  display: 'grid',
-  placeContent: 'center',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  flexDirection: 'column',
   height: 'calc(100vh - 70px)',
   padding: '0',
   [theme.breakpoints.down('sm')]: {
@@ -129,6 +134,7 @@ export const GridItemRightBottom = styled(Grid)(({ theme }) => ({
 }))
 
 export const WrapperListServices = styled(Box)(({ theme }) => ({
+  // width: '40vw',
   width: '40vw',
   height: 'auto',
   display: 'flex',
@@ -136,22 +142,23 @@ export const WrapperListServices = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   alignItems: 'start',
   borderRadius: '20px',
+  padding: '0 30px',
   [theme.breakpoints.down('sm')]: {
     width: 'auto',
-    alignItems: 'center',
+    padding: '0',
   },
 }))
 
 export const WrapperItem = styled(Box)(({ theme }) => ({
-  marginTop: '10px',
+  marginTop: '18px',
   display: 'flex',
   color: '#787976',
   justifyContent: 'center',
   alignItems: 'start',
   flexDirection: 'row',
   [theme.breakpoints.down('sm')]: {
-    width: '100%',
-    padding: '0 30px',
+    width: 'auto',
+    padding: '0 40px',
     justifyContent: 'start',
   },
   '&:hover': {
@@ -159,21 +166,50 @@ export const WrapperItem = styled(Box)(({ theme }) => ({
   },
 }))
 
+export const WrapperTextCaption = styled(Box)(({ theme }) => ({
+  marginTop: '10px',
+  display: 'flex',
+  color: '#787976',
+  justifyContent: 'center',
+  alignItems: 'start',
+  flexDirection: 'row',
+  [theme.breakpoints.down('sm')]: {
+    width: 'auto',
+    justifyContent: 'start',
+  },
+}))
+
+
+
 export const TextItem = styled(Typography)(({ theme }) => ({
   marginLeft: '10px',
   cursor: 'pointer',
   fontSize: '14px',
   color: '#787976',
   fontWeight: '400',
-  lineHeight: '24px',
+  lineHeight: '18px',
   fontFamily: "'Encode Sans Expanded', sans-serif",
   [theme.breakpoints.down('sm')]: {
-    textAlign: 'center',
+    textAlign: 'start',
   },
   '&:hover': {
     color: theme.palette.secondary.main
   },
 }))
 
+
+export const TextCaption = styled(Typography)(({ theme }) => ({
+  fontSize: '12px',
+  marginTop: '10px',
+  color: '#b7b7b7',
+  fontWeight: '400',
+  lineHeight: '18px',
+  fontFamily: "'Encode Sans Expanded', sans-serif",
+  [theme.breakpoints.down('sm')]: {
+    textAlign: 'center',
+    marginTop: '12px',
+    padding: '0 20px',
+  },
+}))
 
 

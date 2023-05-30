@@ -109,12 +109,14 @@ export const WrapperButton = styled(Box)(({ theme }) => ({
   height: '10%',
   display: 'flex',
   justifyContent: 'end',
+  '-webkit-justify-content': 'end',
+  '-webkit-align-items': 'center',
   alignItems: 'center',
-  paddingRight: '24px',
+  padding: '0px 24px 0px 0px',
   borderTop: '1px solid #dfdfdf',
   [theme.breakpoints.down('sm')]: {
-    padding: '4px 20px 4px 0px',
-    height: '6%',
+    padding: '4px 20px 4px 24px',
+
   }
 }))
 
@@ -122,7 +124,7 @@ export const ButtonCloseModal = styled('button')(({ theme }) => ({
   background: 'transparent',
   border: `2px solid ${theme.palette.secondary.main}`,
   color: theme.palette.secondary.main,
-  padding: '4px',
+  padding: '6px',
   borderRadius: '4px',
   fontSize: '14px',
   cursor: 'pointer',

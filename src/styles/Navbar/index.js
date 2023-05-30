@@ -54,7 +54,7 @@ export const WrapperLogo = styled(Box)(({ theme }) => ({
   flexGrow: '1',
   display: 'flex',
   placeItems: 'center',
-  paddingLeft: '10px',
+  paddingLeft: '20px',
   [theme.breakpoints.down('sm')]: {
     paddingLeft: '0px',
     display: 'flex',

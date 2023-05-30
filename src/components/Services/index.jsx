@@ -12,6 +12,8 @@ import {
   WrapperListServices,
   WrapperItem,
   TextItem,
+  WrapperTextCaption,
+  TextCaption,
 
   // ButtomContactForm,
 
@@ -53,7 +55,9 @@ function Services () {
             <TitleSection > {text.titleSection} </TitleSection>
 
             <Title> {text.title}</Title><br></br>
-            <Text> {text.text} </Text>
+            <Text> {text.text1} </Text>
+            <Text> {text.text2} </Text>
+            {/* <TextCaption> {text.text3} </TextCaption> */}
           </WrapperInfo>
         </GridItemLeftTop>
 
@@ -111,20 +115,12 @@ function Services () {
             </WrapperItem>
 
 
-            {/* <ButtomContactForm
-                type="submit"
-                endIcon={!loading ? <ArrowOutwardIcon /> : ''}
-                onClick={handleSubmit}
-              >
-                {
-                  !loading
-                    ? text.buttonText
-                    : <SpinnerInButton size={'24px'} />
-                }
-              </ButtomContactForm> */}
 
           </WrapperListServices>
 
+          <WrapperTextCaption >
+            <TextCaption> {text.text3} </TextCaption>
+          </WrapperTextCaption>
 
         </GridItemRightBottom>
 

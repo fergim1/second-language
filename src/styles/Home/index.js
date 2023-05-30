@@ -22,17 +22,10 @@ export const ContainerHome = styled(Box)(({ theme }) => ({
   }
 }))
 
-// export const ImageBackground = styled('img')(() => ({
-//   position: 'absolute',
-//   objectFit: 'cover',
-//   // width: 'auto',
-//   // height: 'auto',
-// }))
-
 export const TextCaption = styled(Typography)(({ theme }) => ({
   color: theme.palette.secondary.main,
   fontSize: '20px',
-  lineHeight: '0px',
+  lineHeight: '0',
   fontWeight: '700',
   letterSpacing: '1.4px',
   textTransform: 'uppercase',
@@ -46,12 +39,13 @@ export const TextTitle = styled(Typography)(({ theme }) => ({
   textAlign: 'center',
   fontFamily: 'Passion One',
   textTransform: 'uppercase',
+  lineHeight: '1.3',
   [theme.breakpoints.down('sm')]: {
     fontSize: '50px',
   }
 }))
 
-export const ButtonHome = styled('button')(({ theme }) => ({
+export const ButtonHome = styled('button')(({ theme, language }) => ({
   borderRadius: '50px',
   backgroundColor: theme.palette.secondary.main,
   padding: '12px 40px',
@@ -62,6 +56,7 @@ export const ButtonHome = styled('button')(({ theme }) => ({
   cursor: 'pointer',
   textDecoration: 'none',
   transition: 'background-color .3s ease-in-out',
+  margin: `${language === 'en' ? '0px' : '20px'}`,
   '&:hover': {
     backgroundColor: '#1B0071',
     color: 'white',

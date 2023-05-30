@@ -40,7 +40,7 @@ function AboutUs () {
             <TitleSection > {text.titleSection} </TitleSection>
             <Title> {text.title}</Title><br />
             <Text> {text.text1} </Text>
-            <Text> {text.text2} </Text>
+            {/* <Text> {text.text2} </Text> */}
           </WrapperInfo>
         </GridItemLeftTop>
 

@@ -19,19 +19,42 @@ export const LINKS_IMAGES = {
 ////////////////// HOME /////////////////////////////////////////////
 export const TEXT_HOME = Object.freeze({
   es: {
-    caption: 'En vivo',
+    // caption: 'En vivo',
+    // title: 'Experiencias',
     title: 'Experiencias',
-    button: 'Conocer más'
+    caption: 'Inmersivas de idiomas',
+    button: 'Conócenos'
   },
   en: {
-    caption: 'Virtual live',
+    // caption: 'Virtual live',
+    caption: 'immersive language',
     title: 'Experiences',
-    button: 'Know us'
-
+    button: 'About us'
   }
 })
 //////////////////////////////////////////////////////////////////////
 
+
+////////////// ABOUT US  ///////////////////////////////////////////
+//////////////////////////////////// ALERT FORM /////////////////////
+export const TEXT_ABOUT_US = {
+  es: {
+    titleSection: 'Nosotros',
+    title: "Somos apasionados de los idiomas",
+    text1: `El equipo está formado por profesores y guías turísticos que han viajado por todo el mundo y han comprobado que la mejor manera de aprender un idioma es a través de experiencias inmersivas que capturan la atención del estudiante. Second Language desea contribuir a romper la barrera idiomática ofreciendo experiencias virtuales o presenciales como complemento para los estudiantes.`,
+    // text2: `Las experiencias son personalizadas según el nivel y el idioma que los estudiantes estén aprendiendo. Utilizando videos y otros recursos, los estudiantes podrán escuchar una hora de contenido en el idioma que les apasiona sin siquiera darse cuenta de que están aprendiendo.`,
+    // text2: `Las experiencias son personalizadas según el nivel y el idioma que los estudiantes estén aprendiendo.`,
+
+  },
+  en: {
+    titleSection: "About us",
+    title: "We are passionate about languages",
+    text1: `The team consists of teachers and tour guides who have traveled extensively and discovered that the best way to learn a language is through immersive experiences that capture the learner's attention. Second Language aims to help break the language barrier by offering live virtual or face-to-face experiences as a supplement to students.`,
+    // text2: ` The experiences will be tailored to the student's language level and will allow them to learn while having fun. Using videos and other resources, students will be able to listen to an hour of content in the language they are passionate about, without even realizing they are learning`,
+
+  }
+}
+/////////////////////////////////////////////////////////////////////
 
 
 
@@ -151,37 +174,18 @@ export const TEXT_FREE_TRIAL = {
 }
 /////////////////////////////////////////////////////////////////////
 
-////////////// ABOUT US  ///////////////////////////////////////////
-//////////////////////////////////// ALERT FORM /////////////////////
-export const TEXT_ABOUT_US = {
-  es: {
-    titleSection: 'Nosotros',
-    title: "Somos apasionados de los idiomas",
-    text1: `El equipo está formado por profesores y guías turísticos que han viajado por todo el mundo y han comprobado que la mejor manera de aprender un idioma es a través de experiencias inmersivas que capturan la atención del estudiante. Second Language desea contribuir a romper la barrera idiomática ofreciendo experiencias virtuales en vivo como complemento para los estudiantes.`,
-    text2: `Las experiencias son personalizadas según el nivel y el idioma que los estudiantes estén aprendiendo. Utilizando videos y otros recursos, los estudiantes podrán escuchar una hora de contenido en el idioma que les apasiona sin siquiera darse cuenta de que están aprendiendo.`,
-
-  },
-  en: {
-    titleSection: "About us",
-    title: "We are passionate about languages",
-    text1: `The team consists of teachers and tour guides who have traveled extensively and discovered that the best way to learn a language is through immersive experiences that capture the learner's attention. Second Language aims to help break the language barrier by offering live virtual experiences as a supplement to students.`,
-    text2: ` The experiences will be tailored to the student's language level and will allow them to learn while having fun. Using videos and other resources, students will be able to listen to an hour of content in the language they are passionate about, without even realizing they are learning`,
-
-  }
-}
-/////////////////////////////////////////////////////////////////////
 
 ////////////// EXPERIENCES ///////////////////////////////////////////
 //////////////////////////////////// EXPERIENCES /////////////////////
 export const TEXT_EXPERIENCES = {
   es: {
     titleSection: 'Experiencias',
-    title: "Experiencias de las que estamos orgullosos",
+    title: "Algunas de las que estamos orgullosos",
 
   },
   en: {
     titleSection: "Experiences",
-    title: "Experiences that we're proud of",
+    title: "Some of the ones we are proud of",
   }
 }
 
@@ -377,14 +381,18 @@ You will be guided around several paths inside the National Park to witness the 
 export const TEXT_SERVICES = {
   es: {
     titleSection: 'Servicios',
-    title: 'Ofrecemos una conexión real con hablantes nativos',
-    text: 'Nuestro objetivo es hacer un excelente complemento para sus clases de inglés o español.',
-    item1: 'Tours virtuales en Ciudades',
-    item2: 'Tours virtuales en Parques Temáticos',
-    item3: 'Coffee time / After office',
-    item4: 'Clásicos de cine',
+    title: 'Ofrecemos un complemento para sus clases de idioma',
+    text1: 'En las experiencias virtuales, utilizando videos y otros recursos, los estudiantes podrán sumergirse en el idioma que aman sin ni siquiera darse cuenta de que están aprendiendo.',
+    text2: 'Para las experiencias presenciales realizamos tours a cargo de guías con experiencia en turismo y educación, para que los estudiantes puedan desarrollar su comprensión del idioma en situaciones de la vida real.',
+    text3: '* Las experiencias son niveladas según el conocimiento de los estudiantes',
+    // title: 'Ofrecemos una conexión real con hablantes nativos',
+    // text: 'Nuestro objetivo es hacer un excelente complemento para sus clases de inglés o español.',
+    item1: 'Tours virtuales ó presenciales en ciudades',
+    item2: 'Tours virtuales en parques temáticos',
+    item3: 'Conversaciones de café temáticas',
+    item4: 'Narrativas de series o películas',
     item5: 'Tour virtuales de safaris con animales',
-    item6: 'Tour virtuales de Museos',
+    item6: 'Tour virtuales ó presenciales de museos',
     item7: 'Programas de inmersión lingüística',
 
 
@@ -393,15 +401,20 @@ export const TEXT_SERVICES = {
   },
   en: {
     titleSection: "Services",
-    title: "We offer a real connection with Native Speakers",
-    text: "Our goal is to make an outstanding compliment for your English or Spanish classes.",
-    item1: 'Virtual tours in Cities',
-    item2: 'Virtual tour in Theme Parks',
+    title: "We offer a complement for your language classes.",
+    text1: "In virtual experiences, using videos and other resources, students will be able to immerse themselves in the language they love without even realizing they are learning.",
+    text2: "For in-person experiences, we organize tours led by guides with experience in tourism and education, so that students can develop their language comprehension in real-life situations.",
+    text3: `*The experiences are leveled according to the students' knowledge.`,
+
+    // title: "We offer a real connection with Native Speakers",
+    // text: "Our goal is to make an outstanding compliment for your English or Spanish classes.",
+    item1: 'Virtual or face-to-face tours in cities',
+    item2: 'Virtual tour in theme parks',
     item3: 'Coffee time / After office',
-    item4: 'Series and Movies',
+    item4: 'Storytelling of series or movies',
     item5: 'Virtual tours of safaris with animals',
-    item6: 'Virtual tours of Museums',
-    item7: 'Language Immersion Programs',
+    item6: 'Virtual or face-to-face tours of museums',
+    item7: 'Language immersion programs',
 
   }
 }

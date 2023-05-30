@@ -28,10 +28,23 @@ function Home () {
 
   return (
     <ContainerHome id='Home'>
-      <TextCaption>{text.caption}</TextCaption>
-      <TextTitle> {text.title}</TextTitle>
+      {
+        language === 'en'
+          ?
+          <>
+            <TextCaption>{text.caption}</TextCaption>
+            <TextTitle> {text.title}</TextTitle>
+          </>
+          :
+          <>
+            <TextTitle> {text.title}</TextTitle>
+            <TextCaption>{text.caption}</TextCaption>
+          </>
+      }
+
       <ButtonHome
         onClick={() => strollToAboutUs({ language })}
+        language={language}
       >
         {text.button}
       </ButtonHome>
