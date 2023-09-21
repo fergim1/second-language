@@ -9,7 +9,7 @@ import {
 
 
 export const ContainerFooter = styled(Box)(() => ({
-  width: '100vw',
+  width: '100%',
   height: '190px',
 }))
 

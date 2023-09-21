@@ -134,8 +134,8 @@ export const GridItemRightBottom = styled(Grid)(({ theme }) => ({
 }))
 
 export const WrapperVideo = styled(Box)(({ theme }) => ({
-  width: '50vw',
-  maxWidth: "640px",
+  width: 'calc(50vw - 20px)',
+  // maxWidth: "430px",
   height: "360px",
   display: 'flex',
   flexDirection: 'column',
